@@ -3,15 +3,12 @@
     "name": "sabaoat-bites",
     "slug": "sabaoat-bites",
     "version": "1.0.0",
-
     "web": {
       "favicon": "./assets/favicon.png"
     },
-
     "experiments": {
       "tsconfigPaths": true
     },
-
     "plugins": [
       [
         "expo-splash-screen",
@@ -21,13 +18,12 @@
         }
       ]
     ],
-
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -35,6 +31,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.jeremiskiee.sabaoatbites"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0a7b7b47-72a4-4ae1-bcae-af6e908b43f6"
       }
     }
   }
