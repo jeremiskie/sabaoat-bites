@@ -4,13 +4,14 @@ import Animated, { FadeIn, FadeInDown, LinearTransition } from 'react-native-rea
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Brand } from './Brand';
-import { slides } from './foodData';
+import { slides } from '../data/foodData';
 
 type OnboardingScreenProps = {
   onExplore: () => void;
+  onGetStarted: () => void;
 };
 
-export function OnboardingScreen({ onExplore }: OnboardingScreenProps) {
+export function OnboardingScreen({ onExplore, onGetStarted }: OnboardingScreenProps) {
   const [activeSlide, setActiveSlide] = useState(0);
   const { height, width } = useWindowDimensions();
   const slideListRef = useRef<FlatList<(typeof slides)[number]>>(null);
@@ -22,7 +23,7 @@ export function OnboardingScreen({ onExplore }: OnboardingScreenProps) {
 
   const goNext = () => {
     if (activeSlide === slides.length - 1) {
-      onExplore();
+      onGetStarted();
       return;
     }
     goToSlide(activeSlide + 1);
@@ -136,7 +137,7 @@ export function OnboardingScreen({ onExplore }: OnboardingScreenProps) {
           style={({ pressed }) => ({ opacity: pressed ? 0.88 : 1 })}
           className="min-h-[54px] flex-row items-center justify-center gap-[9px] rounded-[18px] bg-[#f26d45]">
           <Text className="text-[15px] font-extrabold text-white">
-            {activeSlide === slides.length - 1 ? 'Get started' : 'Next'}
+            {activeSlide === slides.length - 1 ? 'Get Started' : 'Next'}
           </Text>
           <Text className="text-[19px] font-semibold text-white">→</Text>
         </Pressable>

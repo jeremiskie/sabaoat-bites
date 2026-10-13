@@ -1,6 +1,6 @@
 import { Pressable, ScrollView, Text } from 'react-native';
 
-import { categories } from './foodData';
+import { categories } from '../data/foodData';
 
 type CategoryChipsProps = {
   selected: string;

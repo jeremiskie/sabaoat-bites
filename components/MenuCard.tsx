@@ -1,7 +1,7 @@
 import { Image, Pressable, Text, View } from 'react-native';
 import Animated, { FadeInDown, LinearTransition } from 'react-native-reanimated';
 
-import type { FoodItem } from './foodData';
+import type { FoodItem } from '../data/foodData';
 import { QuantityControl } from './QuantityControl';
 
 type MenuCardProps = {
